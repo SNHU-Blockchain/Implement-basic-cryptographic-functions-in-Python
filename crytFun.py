@@ -30,8 +30,8 @@ def decryt():
         i = wordCryt.key.index(letter)
         decryt_plain_txt += wordCryt.chars[i]
 
-    print(f"orginal message: {input_cipher_txt}")
     print(f"encrypted message: {decryt_plain_txt}")
+    print(f"this is orginal message decryted: {input_cipher_txt}")
 decryt()
 
 
