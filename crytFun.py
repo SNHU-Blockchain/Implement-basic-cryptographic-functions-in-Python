@@ -1,8 +1,8 @@
 import random
 import string
 
-def stringCryt(): 
-
+class wordCryt:
+#vars
     chars = " " + string.punctuation + string.digits + string.ascii_letters
     chars = list(chars)
     key = chars.copy()
@@ -11,29 +11,29 @@ def stringCryt():
 
 #ERCRYPT
 
-    plain_txt = input("Enter message to encrypt: ")
+def encryt(): 
+    input_plain_txt = input("Enter message to encrypt: ")
     cipher_txt = ""
 
-    for letter in plain_txt:
-        i = chars.index(letter)
-        cipher_txt += key[i]
+    for letter in input_plain_txt:
+        i = wordCryt.chars.index(letter)
+        cipher_txt += wordCryt.key[i]
 
-    print(f"orginal message: {plain_txt}")
-    print(f"encrypted message: { cipher_txt}")
+    encryt()
 
 #DECRYPT
+def decryt():
+    input_cipher_txt = input("Enter message to decryt: ")
+    decryt_plain_txt = ""
 
-    cipher_txt = input("Enter message to decryt: ")
-    plain_txt = ""
+    for letter in input_cipher_txt:
+        i = wordCryt.key.index(letter)
+        decryt_plain_txt += wordCryt.chars[i]
 
-    for letter in cipher_txt:
-        i = key.index(letter)
-        plain_txt += chars[i]
+    print(f"orginal message: {input_cipher_txt}")
+    print(f"encrypted message: {decryt_plain_txt}")
+decryt()
 
-    print(f"encrypted message: { cipher_txt}")
-    print(f"orginal message: {plain_txt}")
-
-stringCryt()
 
 
 
